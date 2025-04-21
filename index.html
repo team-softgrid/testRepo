@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발자의 성장 이야기</title>
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --text-color: #333;
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        header {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .profile-section {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: block;
+            background-color: #ddd;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .skills-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .contact-section {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                margin: 1rem;
+                padding: 1rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>개발자의 성장 이야기</h1>
+        <p>GitHub Flow와 함께하는 코드 여정</p>
+    </header>
+
+    <main>
+        <section class="profile-section">
+            <img src="profile-placeholder.jpg" alt="프로필 이미지" class="profile-image">
+            <h2>안녕하세요! 👋</h2>
+            <p>저는 지속적인 성장을 추구하는 개발자입니다. GitHub Flow를 통한 효율적인 협업과 
+               클린 코드 작성을 지향하며, 새로운 기술 학습에 대한 열정을 가지고 있습니다.</p>
+            
+            <div class="skills-section">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">GitHub Flow</span>
+                <span class="skill-tag">Clean Code</span>
+                <span class="skill-tag">협업</span>
+                <span class="skill-tag">문제해결</span>
+            </div>
+        </section>
+
+        <section class="profile-section">
+            <h2>프로젝트 경험</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>GitHub Flow 실습</h3>
+                    <p>효율적인 브랜치 관리와 협업 워크플로우 학습 프로젝트</p>
+                    <p>사용 기술: Git, GitHub</p>
+                </article>
+                <article class="project-card">
+                    <h3>개인 블로그 개발</h3>
+                    <p>반응형 웹 디자인과 사용자 경험을 고려한 블로그 제작</p>
+                    <p>사용 기술: HTML, CSS, JavaScript</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="profile-section contact-section">
+            <h2>연락하기</h2>
+            <p>함께 성장하고 싶은 분들의 연락을 기다립니다!</p>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" class="social-link">GitHub</a>
+                <a href="mailto:your.email@example.com" class="social-link">Email</a>
+                <a href="https://linkedin.com/in/yourusername" class="social-link">LinkedIn</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 
