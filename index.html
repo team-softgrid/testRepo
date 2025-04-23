@@ -10,6 +10,8 @@
             --text-color: #333;
             --bg-color: #f5f5f5;
             --card-bg: #ffffff;
+            --secondary-color: #666;
+            --border-color: #ddd;
         }
 
         * {
@@ -50,9 +52,15 @@
             background-color: #ddd;
         }
 
-        h1 {
+        h1, h2, h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
         }
 
         .skills-section {
@@ -68,6 +76,39 @@
             padding: 0.5rem 1rem;
             border-radius: 20px;
             font-size: 0.9rem;
+        }
+
+        .career-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .career-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .career-period {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .career-details {
+            margin-left: 1.5rem;
+        }
+
+        .career-details ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .education-item {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--primary-color);
         }
 
         .projects-grid {
@@ -110,6 +151,21 @@
             color: white;
         }
 
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-item {
+            background-color: #f0f0f0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+
         @media (max-width: 768px) {
             .profile-section {
                 margin: 1rem;
@@ -125,38 +181,132 @@
 <body>
     <header>
         <h1>개발자의 성장 이야기</h1>
-        <p>GitHub Flow와 함께하는 코드 여정</p>
+        <p>25년+ IT 경력의 기술 리더십 여정</p>
     </header>
 
     <main>
         <section class="profile-section">
             <img src="profile-placeholder.jpg" alt="프로필 이미지" class="profile-image">
-            <h2>안녕하세요! 👋</h2>
-            <p>저는 지속적인 성장을 추구하는 개발자입니다. GitHub Flow를 통한 효율적인 협업과 
-               클린 코드 작성을 지향하며, 새로운 기술 학습에 대한 열정을 가지고 있습니다.</p>
+            <h2>자기소개</h2>
+            <p>20년 이상의 IT 업계 경력을 바탕으로 웹/모바일 개발, 서비스 기획, 프로젝트 관리 등 다양한 경험을 보유하고 있습니다. 개발자로 시작하여 팀장, 임원급 관리자로 성장하며 기술적 역량과 비즈니스 감각을 동시에 갖추었습니다.</p>
             
-            <div class="skills-section">
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">GitHub Flow</span>
-                <span class="skill-tag">Clean Code</span>
-                <span class="skill-tag">협업</span>
-                <span class="skill-tag">문제해결</span>
+            <h3>주요 강점</h3>
+            <ul class="career-details">
+                <li>광범위한 개발 경험: 웹사이트, 솔루션, 모바일 앱 등 다양한 분야의 개발 경험</li>
+                <li>비즈니스 이해: 다양한 업종의 회사 경험을 통한 폭넓은 비즈니스 이해</li>
+                <li>커뮤니케이션 능력: 개발자와 경영진 사이의 원활한 소통 능력</li>
+                <li>효율적인 업무 추진: 개발 방법론 수립, 협업 방식 개선 등 업무 효율화 경험</li>
+                <li>사업 및 서비스 기획 능력: 다수의 성공적인 서비스 기획 및 론칭 경험</li>
+            </ul>
+        </section>
+
+        <section class="profile-section">
+            <h2>경력 사항</h2>
+            
+            <div class="career-item">
+                <h3>(주)모던텍 플랫폼운영본부 본부장(상무)</h3>
+                <div class="career-period">2022.02 - 현재 (3년차)</div>
+                <div class="career-details">
+                    <p>전기차 충전기 및 충전 인프라 운영본부(SWO,CSO,PMO,CPO) 총괄</p>
+                    <h4>주요 성과:</h4>
+                    <ul>
+                        <li>SWO, CSO,PMO,CPO 각 팀 빌딩 , RNR , 업무 프로세스 수립</li>
+                        <li>SWO 충전기 HMI SW, OCPP 1.6 엔진, 충전소관제SW 기획,개발,운영,고도화</li>
+                        <li>CSO 접수처리 프로세스 확립 및 관리 시스템 구축 운영</li>
+                        <li>로봇 충전 인프라 구축 및 운영 사업화</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="career-item">
+                <h3>비엠티 EMS 개발팀 임원(이사)</h3>
+                <div class="career-period">2015.07 - 2021.06 (6년)</div>
+                <div class="career-details">
+                    <p>IIOT 기반 전력에너지관리 솔루션 개발 및 사업 총괄</p>
+                    <h4>주요 성과:</h4>
+                    <ul>
+                        <li>솔루션 서비스로 사업구도 전환, 대기업/중견기업 레퍼런스 확보</li>
+                        <li>클라우드 기반 BEMS, FEMS, EMS 솔루션 개발</li>
+                        <li>2017 IoT Award 기술혁신대상/비즈니스 대상 수상</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 이전 경력 요약 -->
+            <div class="career-item">
+                <h3>이전 경력</h3>
+                <ul class="career-details">
+                    <li>유호스트 플랫폼사업부 부장(연구소장) (2009-2015)</li>
+                    <li>브로드밴드쇼핑네트웍스 서비스본부 과장 (2007-2008)</li>
+                    <li>아이셀러 PM 및 개발 (창업) (2004-2007)</li>
+                    <li>소프트밴드 개발팀장 (2000-2004)</li>
+                </ul>
             </div>
         </section>
 
         <section class="profile-section">
-            <h2>프로젝트 경험</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <h3>GitHub Flow 실습</h3>
-                    <p>효율적인 브랜치 관리와 협업 워크플로우 학습 프로젝트</p>
-                    <p>사용 기술: Git, GitHub</p>
-                </article>
-                <article class="project-card">
-                    <h3>개인 블로그 개발</h3>
-                    <p>반응형 웹 디자인과 사용자 경험을 고려한 블로그 제작</p>
-                    <p>사용 기술: HTML, CSS, JavaScript</p>
-                </article>
+            <h2>보유 기술</h2>
+            <div class="tech-stack">
+                <span class="tech-item">PHP</span>
+                <span class="tech-item">ASP</span>
+                <span class="tech-item">JSP</span>
+                <span class="tech-item">SQL</span>
+                <span class="tech-item">Java</span>
+                <span class="tech-item">Spring Framework</span>
+                <span class="tech-item">Python</span>
+                <span class="tech-item">Windows Server</span>
+                <span class="tech-item">Linux</span>
+                <span class="tech-item">Git/Lab/Hub</span>
+                <span class="tech-item">RedMine</span>
+                <span class="tech-item">Jira</span>
+            </div>
+
+            <h3>관심 기술</h3>
+            <div class="tech-stack">
+                <span class="tech-item">AI Automation</span>
+                <span class="tech-item">DevOps</span>
+                <span class="tech-item">RPA</span>
+                <span class="tech-item">V2G/V2H</span>
+                <span class="tech-item">스마트 그리드</span>
+            </div>
+        </section>
+
+        <section class="profile-section">
+            <h2>교육 이수</h2>
+            <div class="education-item">
+                <h3>최근 교육</h3>
+                <ul class="career-details">
+                    <li>K-하이테크AI 리더스포험 AI 마스터 과정 (2024)</li>
+                    <li>ChatGpt Ai 툴 마스터 (진행중)</li>
+                    <li>홍드로이드의 AI 서비스 개발 (진행중)</li>
+                    <li>랭체인으로 AI 서비스 개발 (진행중)</li>
+                </ul>
+            </div>
+            <div class="education-item">
+                <h3>이전 교육</h3>
+                <ul class="career-details">
+                    <li>그로스 마케팅 올인원 패키지 (2020-2021)</li>
+                    <li>스프링과 JPA 기반 웹 애플리케이션 개발</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="profile-section">
+            <h2>향후 자기계발 분야</h2>
+            <div class="career-details">
+                <h3>AI/ML 전문성 강화</h3>
+                <ul>
+                    <li>LLM 활용 및 통합 개발 역량</li>
+                    <li>AI 기반 비즈니스 모델 설계 및 구현</li>
+                    <li>AutoML과 MLOps 실무 적용</li>
+                </ul>
+
+                <h3>전기차 인프라 고도화</h3>
+                <ul>
+                    <li>V2G/V2H 기술 표준 및 구현</li>
+                    <li>충전 인프라 스마트 그리드 통합</li>
+                    <li>충전 인프라 데이터 분석 및 최적화</li>
+                </ul>
             </div>
         </section>
 
